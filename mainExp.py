@@ -38,7 +38,7 @@ for nnn in range(len(LL)):
 
     ############## Polar Code Construction #######################################
 
-    # Find bit-channel reliabilities using Bhattacharyya parameter
+    # Find bit-channel reliabilities using the Bhattacharyya parameter
     Z   = polar.constructPolarCode(N2, design_param = design_snr)
     idx_inf_plus_frozen = polar.bitReverseArray(np.arange(N), n2)
     Z_inf_frozen        = Z[idx_inf_plus_frozen]
@@ -115,7 +115,7 @@ for nnn in range(len(LL)):
         else:
             no_error_flag = 0
 
-        if no_error_flag == 3: # if 3 consecutive SNR values gives no error, than terminate the simulation.
+        if no_error_flag == 3: # if 3 consecutive SNR values give no error, then terminate the simulation.
             print('Precision reached.')
             break
 # END OF LOOP
